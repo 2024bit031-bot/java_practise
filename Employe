@@ -1,0 +1,41 @@
+//we  are going to calculate the salary of the contractor and employee
+
+abstract class Employee{
+	String name;
+	double paymentmethods;
+	Employee(String name,double paymentmethods){
+	this.name=name;
+	this.paymentmethods=paymentmethods;
+}
+abstract double calculateSalary();
+}
+
+class Constructor extends Employee{
+	double workinghours;
+	Constructor(String name, double paymentPerHour,double workinghours){
+	super(name, paymentPerHour);
+	this.workinghours=workinghours;
+	}
+	  double calculateSalary(){
+       return paymentmethods * workinghours;
+}
+}
+class Eonstructor extends Employee{
+	double workinghours;
+	Eonstructor(String name, double paymentPerHour ,double workinghours){
+	super(name, paymentPerHour);
+	this.workinghours=workinghours;
+	}
+  double calculateSalary(){
+       return paymentmethods * workinghours +1000;
+}
+}
+class Text{
+public static void main (String[]args){
+	Constructor c=new Constructor("nandini",232,240);
+	Eonstructor e=new Eonstructor("sairam",422,344);
+	System.out.println("contacter salary is:"+c.calculateSalary());
+	System.out.println("employee salary is:"+e.calculateSalary());
+
+}
+}
