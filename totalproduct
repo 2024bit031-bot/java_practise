@@ -1,0 +1,42 @@
+import java.util.Scanner;
+class Product{
+String productname;
+int prize;
+int quantity;
+  
+void inputproduct(String productname,int prize,int quantity){
+this.productname=productname;
+this.prize=prize;
+this.quantity=quantity;
+
+}
+
+
+void calculatetotal(){
+ var total=prize*quantity;
+System.out.println("total prize is:"+total);
+}
+
+ void displaybill(){
+System.out.println("product name is:"+productname);
+System.out.println("product prize is:"+prize);
+System.out.println("product quantity is:"+quantity);
+calculatetotal();
+
+}
+}
+public class pec{
+public static void main(String[]args){
+ Scanner sc=new Scanner(System.in);
+System.out.println("product name is:");
+ String productname=sc.nextLine();
+System.out.println("product prize is:");
+int prize=sc.nextInt();
+System.out.println("product quantity is:");
+int quantity=sc.nextInt();
+Product p=new Product();
+p.inputproduct(productname,prize,quantity);
+p.calculatetotal();
+p.displaybill();
+}
+}
