@@ -1,0 +1,31 @@
+class Bankaccount{
+	int accountnumber;
+	String accountholdername;
+	double balance;
+Bankaccount(int accountnumber,String accountholdername,double balance){
+	this.accountnumber=accountnumber;
+	this. accountholdername= accountholdername;
+	this.balance=balance;
+}
+void deposit(double d){
+balance+=d;
+}
+void withdraw(double w){
+balance-=w;
+}
+void display(){
+System.out.println(accountnumber);
+System.out.println(accountholdername);
+System.out.println(balance);
+}
+}
+public class pec{
+public static void main(String[]args){
+Bankaccount b=new Bankaccount(5678,"nandini",1000000);;
+b.deposit(576);
+b.withdraw(7788);
+b.display();
+}
+}
+
+
